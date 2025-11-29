@@ -34,7 +34,7 @@ if (!isLoggedIn()) {
         'dropoff_time' => $_GET['dropoff_time'] ?? ''
     ];
     setFlashMessage('warning', 'Please login or create an account to book a car.');
-    redirect('auth/login.php?return=' . urlencode('book.php?car_id=' . $carId));
+    redirect('auth/login.php?return=' . urlencode('../book.php?car_id=' . $carId));
 }
 
 // Get any pending booking data from session
